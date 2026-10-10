@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ian Ricketts — Creative Director</title>
+<meta name="description" content="Brand, merch and apparel work by Ian Ricketts: Bestfrend, BRANDLAB, Buckstop, Oregon Lightning and 60+ Central Oregon companies.">
+<style>
+:root{--paper:#EFEBE2;--ink:#000;--mute:#5a564b;--hair:#c9c3b4;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.4;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px}
+@media(min-width:900px){.wrap{padding:0 48px}}
+h3{font-weight:700;font-size:clamp(22px,2.6vw,32px);letter-spacing:-.03em;line-height:1.05}
+
+nav{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1.5px solid var(--ink)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;gap:16px}
+nav .nm{font-weight:700;letter-spacing:-.02em;white-space:nowrap}
+nav ul{display:flex;gap:18px;list-style:none;font-size:13px;overflow-x:auto;white-space:nowrap}
+nav a{text-decoration:none} nav a:hover{text-decoration:underline}
+
+.hero{padding:56px 0 0}
+.hero h1{font-weight:700;font-size:clamp(64px,13.5vw,196px);line-height:.84;letter-spacing:-.06em;margin-left:-.04em}
+.hero h1 span{display:block}
+.hero .sub{display:grid;grid-template-columns:1fr;gap:20px;margin-top:28px;align-items:end}
+@media(min-width:900px){.hero .sub{grid-template-columns:1.4fr 1fr}}
+.hero .role{font-weight:700;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em;line-height:1.08;max-width:720px}
+.hero .state{font-size:16px;line-height:1.45;max-width:560px;color:#1a1a1a}
+.hero .links{font-size:14px;line-height:1.7}
+.hero .links a{text-decoration:none;border-bottom:1px solid var(--ink)}
+.heroimg{margin-top:40px;height:min(82vh,760px);overflow:hidden;position:relative}
+.heroimg img{width:100%;height:100%;object-fit:cover}
+.heroimg .cap{position:absolute;left:24px;bottom:16px;color:#fff;font-size:12px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+@media(min-width:900px){.heroimg .cap{left:48px}}
+
+.band{background:var(--ink);color:var(--paper);padding:40px 0}
+.band .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+@media(min-width:900px){.band .wrap{grid-template-columns:repeat(4,1fr)}}
+.band .n{font-weight:700;font-size:clamp(44px,6vw,72px);letter-spacing:-.05em;line-height:.9}
+.band .l{font-size:14px;color:#cfc9bc;margin-top:8px;max-width:220px;line-height:1.35}
+
+.case{padding:72px 0 56px;border-top:1.5px solid var(--ink)}
+.case.dark{background:var(--white)}
+.case-head{display:grid;grid-template-columns:1fr;gap:16px 40px;margin-bottom:28px}
+@media(min-width:900px){.case-head{grid-template-columns:1fr 1fr} .case-head h2{grid-column:1} .case-head .case-body{grid-column:2;grid-row:1/3} .case-head .kicker{grid-column:1}}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.01em}
+.case h2{font-weight:700;font-size:clamp(40px,6.5vw,88px);letter-spacing:-.05em;line-height:.9}
+.case-body p{font-size:18px;line-height:1.45;max-width:560px}
+.meta{font-size:13px;color:var(--mute);margin-top:14px;line-height:1.5}
+
+.lead{position:relative;height:min(85vh,820px);overflow:hidden;margin:8px 0 0}
+.lead img{width:100%;height:100%;object-fit:cover}
+.lead .cap{position:absolute;left:24px;bottom:16px;color:#fff;font-size:12px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+@media(min-width:900px){.lead .cap{left:48px}}
+
+.story{display:grid;grid-template-columns:1fr;gap:28px;padding:40px 0 36px}
+@media(min-width:800px){.story{grid-template-columns:repeat(3,1fr);gap:40px}}
+.story .lbl{font-size:13px;font-weight:700;border-top:1.5px solid var(--ink);padding-top:8px;margin-bottom:8px}
+.story p{font-size:15.5px;line-height:1.5}
+
+.subhead{display:grid;grid-template-columns:1fr;gap:8px 40px;margin:44px 0 16px;border-top:1px solid var(--hair);padding-top:16px}
+@media(min-width:800px){.subhead{grid-template-columns:1fr 1fr}}
+.subhead p{font-size:15px;line-height:1.5;max-width:560px}
+
+.grid{display:grid;gap:12px}
+.grid.c2{grid-template-columns:repeat(2,1fr)}
+.grid.c3{grid-template-columns:repeat(2,1fr)}
+.grid.c4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:800px){.grid.c3{grid-template-columns:repeat(3,1fr)} .grid.c4{grid-template-columns:repeat(4,1fr)}}
+figure{margin:0;background:var(--white)}
+figure img,figure video{width:100%;aspect-ratio:4/5;object-fit:cover}
+figure.sq img,figure.sq video{aspect-ratio:1}
+figure.wide img,figure.wide video{aspect-ratio:16/10}
+figure.span2{grid-column:span 2}
+figcaption{font-size:12px;color:var(--mute);padding:8px 2px 0;background:transparent}
+.row{margin-top:12px}
+
+.ba{display:grid;grid-template-columns:1fr;gap:12px;align-items:stretch;margin-bottom:12px}
+@media(min-width:800px){.ba{grid-template-columns:1fr auto 1fr}}
+.ba .arrow{display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:700}
+.logo{background:var(--white);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;min-height:180px}
+.logo img{max-height:200px;width:auto;max-width:100%;object-fit:contain}
+.logo.tall img{max-height:380px}
+.logo.paper{background:var(--paper);border:1px solid var(--hair)}
+.logo.ink{background:var(--ink)} .logo.ink figcaption{color:#cfc9bc}
+.logo figcaption{margin-top:auto;padding-top:14px;align-self:flex-start}
+
+.wall{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:700px){.wall{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.wall{grid-template-columns:repeat(4,1fr)}}
+.wall .logo{aspect-ratio:1;min-height:0;padding:14%}
+.wall .logo img{width:100%;height:100%;object-fit:contain;max-height:none}
+.sites figure img{aspect-ratio:16/10;object-fit:cover;object-position:top}
+
+.about{padding:72px 0 80px;border-top:1.5px solid var(--ink)}
+.about .wrap{display:grid;grid-template-columns:1fr;gap:32px}
+@media(min-width:900px){.about .wrap{grid-template-columns:260px 1fr}}
+.about img{width:260px;border-radius:18px}
+.about h2{font-weight:700;font-size:clamp(36px,5vw,64px);letter-spacing:-.05em;line-height:.95;margin-bottom:18px}
+.about p{font-size:17px;line-height:1.5;max-width:640px;margin-bottom:14px}
+.about .cta{display:inline-block;margin-top:10px;background:var(--ink);color:var(--paper);padding:14px 20px;text-decoration:none;font-weight:700;margin-right:10px}
+.about .cta.alt{background:none;color:var(--ink);border:1.5px solid var(--ink)}
+footer{border-top:1.5px solid var(--ink);padding:18px 0;font-size:13px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+dialog{border:0;padding:0;background:transparent;max-width:95vw;max-height:95vh}
+dialog::backdrop{background:rgba(0,0,0,.92)}
+dialog img{max-width:95vw;max-height:95vh;object-fit:contain}
+figure img,.logo img{cursor:zoom-in}
+@media(prefers-reduced-motion:reduce){video{display:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap"><div class="nm">Ian Ricketts</div>
+<ul><li><a href="#bestfrend">Bestfrend</a></li><li><a href="#brandlab">BRANDLAB</a></li><li><a href="#buckstop">Buckstop</a></li><li><a href="#lightning">Oregon Lightning</a></li><li><a href="#sonl">Spirit of Our Native Language</a></li><li><a href="#work">More work</a></li><li><a href="#marks">Logos</a></li><li><a href="#about">About</a></li></ul></div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1><span>IAN</span><span>RICKETTS</span></h1>
+    <div class="sub">
+      <div>
+        <div class="role">Creative direction for brands and the merchandise that represents them.</div>
+        <p class="state" style="margin-top:14px">Eight years leading creative for brands and the people behind them: ten-plus full rebrands, 60+ companies helped define who they are, 15+ brand stores built, and one apparel brand of my own, made by hand since 2018. Everything on this page was made to be worn, hung, driven or handed to a customer.</p>
+      </div>
+      <div class="links">Creative Director · Remote, US<br><a href="mailto:ianricketts188@gmail.com">ianricketts188@gmail.com</a><br><a href="https://bestfrend.xyz">bestfrend.xyz</a> · <a href="https://whitehillweb.com">whitehillweb.com</a><br><a href="Ian_Ricketts_Resume.pdf">Resume (PDF)</a></div>
+    </div>
+  </div>
+  <div class="heroimg"><img src="img/bf_1689.jpg" alt="Bestfrend reworked hooded jacket" style="object-position:50% 30%"><div class="cap">Bestfrend · reworked hooded jacket, one of one</div></div>
+</header>
+
+<section class="band"><div class="wrap">
+  <div><div class="n">10+</div><div class="l">full rebrands directed, from vision to storefront</div></div>
+  <div><div class="n">60+</div><div class="l">companies I have helped define and brand</div></div>
+  <div><div class="n">15+</div><div class="l">brand stores built, from identity and color to merch and marketing</div></div>
+  <div><div class="n">400+</div><div class="l">production-ready graphics art-directed and shipped</div></div>
+</div></section>
+
+
+<section class="case" id="bestfrend">
+  <div class="wrap">
+    <header class="case-head">
+      <div class="kicker">My brand · 2018 to present</div>
+      <h2>Bestfrend</h2>
+      <div class="case-body"><p>One of one. Handmade. Through thick and thin. Bestfrend is the apparel and art brand I started in 2018 and have run every part of since. It is where I learned everything it takes to start and run a clothing brand, by doing all of it.</p><div class="meta">Role: founder, creative director, designer, maker, photographer, store owner. <a href="https://bestfrend.xyz">bestfrend.xyz</a></div></div>
+    </header>
+  </div>
+  <div class="lead"><img src="img/bf_1564.jpg" alt="Hand-painted suit, shot in the studio" style="object-position:50% 35%" loading="lazy"><div class=cap>Hand-painted suit, shot in the studio</div></div><div class="wrap"><div class="story"><div><div class="lbl">Where it started</div><p>Bend, 2018. No team and no budget, a sewing machine, a screen and a point of view. Bestfrend began as the clothes I wanted to wear and could not buy, and a name that says what the brand is for: there is no I in frend.</p></div><div><div class="lbl">How it is made</div><p>Every piece is one of one. Garments and fabric are sourced, cut, sewn, printed, painted and patched by hand, then shot in-house, listed, packed and shipped by me. Print-on-demand came in later for secondary products, which is where my POD and Shopify fluency started.</p></div><div><div class="lbl">What it became</div><p>My primary income from 2019 to 2022 across Bend, Fort Lauderdale and San Diego: drops, pop-ups, a store window, and a site where nothing is available anywhere else. The brand taught me product, production, pricing, e-commerce, content, fulfillment and community, all at once.</p></div></div></div><div class="wrap"><div class="grid c3 "><figure class=""><img src="img/bf_0918.jpg" alt="Hand-painted hoodie" loading="lazy"><figcaption>Hand-painted hoodie</figcaption></figure><figure class=""><img src="img/bf_1689.jpg" alt="Reworked hooded jacket" loading="lazy"><figcaption>Reworked hooded jacket</figcaption></figure><figure class=""><img src="img/bf_1612.jpg" alt="AM I PRETTY tee" loading="lazy"><figcaption>AM I PRETTY tee</figcaption></figure><figure class=""><img src="img/bf_0919.jpg" alt="Crossbody and hoodie" loading="lazy"><figcaption>Crossbody and hoodie</figcaption></figure><figure class=""><img src="img/bf_1687.jpg" alt="Patchwork jacket" loading="lazy"><figcaption>Patchwork jacket</figcaption></figure><figure class=""><img src="img/bf_1702.jpg" alt="Balaclava and long sleeve" loading="lazy"><figcaption>Balaclava and long sleeve</figcaption></figure><figure class=""><img src="img/bf_1793.jpg" alt="Collage jacket, winter" loading="lazy"><figcaption>Collage jacket, winter</figcaption></figure><figure class=""><img src="img/bf_1568.jpg" alt="Layered tee and shorts" loading="lazy"><figcaption>Layered tee and shorts</figcaption></figure><figure class=""><img src="img/bf_1545.jpg" alt="Patchwork puffer" loading="lazy"><figcaption>Patchwork puffer</figcaption></figure><figure class=""><img src="img/bf_1522.jpg" alt="Hooded set" loading="lazy"><figcaption>Hooded set</figcaption></figure><figure class=""><img src="img/bf_1605.jpg" alt="Blue" loading="lazy"><figcaption>Blue</figcaption></figure><figure class=""><img src="img/bf_0947.jpg" alt="The rack" loading="lazy"><figcaption>The rack</figcaption></figure></div></div><div class="row"><div class="wrap"><div class="grid c2 "><figure class="wide vid"><video src="clips/bf_popup.mp4" poster="img/bf_mov_3443.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Pop-up</figcaption></figure><figure class="wide vid"><video src="clips/bf_window.mp4" poster="img/bf_mov_3419.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Store window</figcaption></figure><figure class="wide"><img src="img/site_bestfrend_home.jpg" alt="bestfrend.xyz" loading="lazy"><figcaption>bestfrend.xyz</figcaption></figure><figure class="wide"><img src="img/site_bestfrend_shop.jpg" alt="The drop" loading="lazy"><figcaption>The drop</figcaption></figure></div></div></div>
+</section>
+
+
+<section class="case dark" id="brandlab">
+  <div class="wrap">
+    <header class="case-head">
+      <div class="kicker">Rebrand · 2022 to 2026</div>
+      <h2>Bear Prints becomes BRANDLAB</h2>
+      <div class="case-body"><p>A Central Oregon screen-printing shop operating since 1978, rebuilt from the name up. I set the vision, created the name, logo, slogan and business model, and carried the identity through to a new retail location that opened February 2, 2026.</p><div class="meta">Role: creative director and general manager. Name, logo, slogan, identity system, environment, web, collateral, launch.</div></div>
+    </header>
+  </div>
+  <div class="lead"><img src="img/bl_3081.jpg" alt="BRANDLAB, Redmond, the night before opening" style="object-position:50% 55%" loading="lazy"><div class=cap>BRANDLAB, Redmond, the night before opening</div></div><div class="wrap"><div class="story"><div><div class="lbl">What they had</div><p>Bear Prints had printed shirts for Central Oregon since 1978 and had worn three different logos doing it. People knew the name. The name did not say what the shop had become: apparel, print, embroidery, promo, and online company stores for local businesses.</p></div><div><div class="lbl">The idea</div><p>Stop selling printing and sell the brand. A new name, BRANDLAB, a monogram that works as a hat patch and a storefront, and a slogan that says the whole offer in three words: Design. Create. Wear. The business model followed the name: a retail-facing shop that builds brands and the merch that carries them.</p></div><div><div class="lbl">What shipped</div><p>The mark, the identity system, the window and counter wrap, the hiring flyer, business cards and in-store print, the online store, and a built-out retail floor that opened on February 2, 2026. I managed the launch and lead the team of seven that runs it.</p></div></div></div><div class="wrap"><div class="grid c4 "><div class="logo "><img src="img/bp_bear.png" alt="Bear Prints, first mark" loading="lazy"><figcaption>Bear Prints, first mark</figcaption></div><div class="logo "><img src="img/bp_claw.png" alt="Bear Prints, the claw" loading="lazy"><figcaption>Bear Prints, the claw</figcaption></div><div class="logo "><img src="img/bp_teal.png" alt="Bear Prints, teal" loading="lazy"><figcaption>Bear Prints, teal</figcaption></div><div class="logo "><img src="img/bl_interim.png" alt="Interim: Bearprints Brand Lab" loading="lazy"><figcaption>Interim: Bearprints Brand Lab</figcaption></div></div></div><div class="wrap"><div class="ba" style="grid-template-columns:1fr;margin-top:12px"><div class="arrow" style="padding:8px 0">&darr;</div><div class="logo tall"><img src="img/mark_brandlab.png" alt="BRANDLAB. Design. Create. Wear." loading="lazy"><figcaption>BRANDLAB. Design. Create. Wear.</figcaption></div></div></div><div class="wrap"><div class="grid c3 "><figure class=""><img src="img/bl_1352.jpg" alt="Window at the old location, the first place the mark went up" loading="lazy"><figcaption>Window at the old location, the first place the mark went up</figcaption></figure><figure class=""><img src="img/bl_2719.jpg" alt="Build-out, counter wrap going on" loading="lazy"><figcaption>Build-out, counter wrap going on</figcaption></figure><figure class=" vid"><video src="clips/bl_counter.mp4" poster="img/bl_mov_2793.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Counter wrap</figcaption></figure><figure class=""><img src="img/bl_2879.jpg" alt="Hiring flyer: opening February 2" loading="lazy"><figcaption>Hiring flyer: opening February 2</figcaption></figure><figure class=""><img src="img/bl_2981.jpg" alt="Mirrored counter" loading="lazy"><figcaption>Mirrored counter</figcaption></figure><figure class=""><img src="img/bl_3101.jpg" alt="Design. Create. Wear." loading="lazy"><figcaption>Design. Create. Wear.</figcaption></figure><figure class=""><img src="img/bl_3025.jpg" alt="Storefront" loading="lazy"><figcaption>Storefront</figcaption></figure><figure class=""><img src="img/bl_3099.jpg" alt="Retail floor, opening week" loading="lazy"><figcaption>Retail floor, opening week</figcaption></figure><figure class=""><img src="img/bl_2935.jpg" alt="Collateral" loading="lazy"><figcaption>Collateral</figcaption></figure><figure class=""><img src="img/bl_3070.jpg" alt="Before: the Bear Prints lobby" loading="lazy"><figcaption>Before: the Bear Prints lobby</figcaption></figure><figure class=""><img src="img/bl_4387.jpg" alt="Before: the old shop" loading="lazy"><figcaption>Before: the old shop</figcaption></figure><figure class=""><img src="img/bl_4402.jpg" alt="Press floor" loading="lazy"><figcaption>Press floor</figcaption></figure></div></div>
+</section>
+
+
+<section class="case" id="buckstop">
+  <div class="wrap">
+    <header class="case-head">
+      <div class="kicker">Rebrand · Buckstop Truckware, est. 2001</div>
+      <h2>Buckstop</h2>
+      <div class="case-body"><p>A truck outfitter that had worn the same oval badge for two decades. The new mark finally looks like the trucks they build.</p><div class="meta">Role: creative director. Logo, color, apparel graphics, online store, merch program.</div></div>
+    </header>
+  </div>
+  <div class="lead"><img src="img/bs_tee.jpg" alt="Printed tee, truck back" style="object-position:50% 50%" loading="lazy"><div class=cap>Printed tee, truck back</div></div><div class="wrap"><div class="story"><div><div class="lbl">What they had</div><p>Buckstop has built bumpers and outfitted trucks in Oregon since 2001. For most of that time the brand was a red-and-grey oval, with TrailReady sub-brands for wheels and bumpers alongside it. Solid, forgettable, and nothing you would wear.</p></div><div><div class="lbl">The idea</div><p>Put the name where the truck already is. BUCKSTOP arched over a lifted Super Duty wearing their front bumper, mountains behind it, EST. 2001 underneath. One version in red and green for the drop; one in a single color for everything that gets printed, embroidered or wrapped after.</p></div><div><div class="lbl">What shipped</div><p>The drop, the online store, printed tees, and the truck-back graphic: suspension, bumpers, wheels. A mark their customers ask for on a shirt, which is the whole point.</p></div></div></div><div class="wrap"><div class="ba"><div class="logo paper"><img src="img/bs_old_oval.png" alt="Before: the oval" loading="lazy"><figcaption>Before: the oval</figcaption></div><div class="arrow">&rarr;</div><div class="logo tall"><img src="img/bs_new_2c.png" alt="After: two-color" loading="lazy"><figcaption>After: two-color</figcaption></div></div></div><div class="wrap"><div class="grid c2 "><div class="logo tall" style="background:#8e8a80"><img src="img/bs_new_1c.png" alt="One-color version" loading="lazy"><figcaption style="color:#222">One-color version, for mid-tone garments</figcaption></div><figure class="wide"><img src="img/bs_store.jpg" alt="The store" loading="lazy"><figcaption>The store</figcaption></figure><div class="logo "><img src="img/bs_truckback.png" alt="Truck back: suspension · bumpers · wheels" loading="lazy"><figcaption>Truck back: suspension · bumpers · wheels</figcaption></div><figure class="sq"><img src="img/bs_tee.jpg" alt="On the shirt" loading="lazy"><figcaption>On the shirt</figcaption></figure></div></div>
+</section>
+
+
+<section class="case dark" id="lightning">
+  <div class="wrap">
+    <header class="case-head">
+      <div class="kicker">Pro sports · AF1 · 2024</div>
+      <h2>Oregon Lightning</h2>
+      <div class="case-body"><p>Oregon&rsquo;s new professional football team. A new team needs everything at once, and needs it on opening night.</p><div class="meta">Role: brand, store, merchandise, arena sales. Mascot illustration art-directed.</div></div>
+    </header>
+  </div>
+  <div class="lead"><img src="img/ol_mov_8060.jpg" alt="The first run on press" style="object-position:50% 50%" loading="lazy"><div class=cap>The first run on press</div></div><div class="wrap"><div class="story"><div><div class="lbl">What they had</div><p>The AF1 brought a professional football team to Oregon in 2024. On day one that is a name and a schedule. No store, no merch, no mascot, and fans about to walk into an arena.</p></div><div><div class="lbl">The idea</div><p>A Sasquatch in a 97 jersey carrying the ball over the shape of the state, lightning behind him. I art-directed the mascot and built the merchandise line around it so every piece reads as the team from across the stands.</p></div><div><div class="lbl">What shipped</div><p>The team store, tees and hoodies, the print runs, and arena sales on game day. Branding, store and merchandise, start to finish.</p></div></div></div><div class="wrap"><div class="grid c3 "><div class="logo tall"><img src="img/ol_mascot.png" alt="The mascot" loading="lazy"><figcaption>The mascot</figcaption></div><figure class="sq"><img src="img/ol_tee.jpg" alt="Game tee" loading="lazy"><figcaption>Game tee</figcaption></figure><figure class="sq"><img src="img/ol_hoodie1.jpg" alt="Hoodie" loading="lazy"><figcaption>Hoodie</figcaption></figure><figure class="wide"><img src="img/ol_store.jpg" alt="Team store" loading="lazy"><figcaption>Team store</figcaption></figure><figure class="wide vid"><video src="clips/ol_press.mp4" poster="img/ol_mov_8060.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>On press</figcaption></figure><figure class="wide vid"><video src="clips/ol_press2.mp4" poster="img/ol_mov_1339.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Printing the drop</figcaption></figure></div></div>
+</section>
+
+
+<section class="case" id="sonl">
+  <div class="wrap">
+    <header class="case-head">
+      <div class="kicker">Nonprofit · Warm Springs</div>
+      <h2>Spirit of Our Native Language</h2>
+      <div class="case-body"><p>An event and nonprofit for Native language revitalization. I drew the logo by hand, with elders from the reservation, during the event.</p><div class="meta">Role: illustrator and creative lead. Hand-drawn mark, annual identity, apparel, patches.</div></div>
+    </header>
+  </div>
+  <div class="lead"><img src="img/sonl_tees2.jpg" alt="Printed tees and patches, stacked for the gathering" style="object-position:50% 50%" loading="lazy"><div class=cap>Printed tees and patches, stacked for the gathering</div></div><div class="wrap"><div class="story"><div><div class="lbl">What they had</div><p>A gathering on the Warm Springs reservation for people keeping their languages alive, and a need for an identity that came from the community rather than being handed to it.</p></div><div><div class="lbl">The idea</div><p>Draw it there. I sat with elders during the event and drew the mark by hand: a face speaking, the language inside it. The badge comes back every year with a new treatment, so it stays recognizable while each year is its own.</p></div><div><div class="lbl">What shipped</div><p>The 2022 Spirit of Our Native Language badge, the 2023 Healing Through Our Native Languages version, the Eagles Ichishkiin tee for Warm Springs, and printed tees and patches for every attendee, every year.</p></div></div></div><div class="wrap"><div class="ba"><div class="logo paper"><img src="img/sonl_2022.png" alt="2022" loading="lazy"><figcaption>2022</figcaption></div><div class="arrow">&rarr;</div><div class="logo paper"><img src="img/sonl_2023.png" alt="2023" loading="lazy"><figcaption>2023</figcaption></div></div></div><div class="wrap"><div class="grid c3 "><div class="logo "><img src="img/sonl_set.png" alt="Badge set" loading="lazy"><figcaption>Badge set</figcaption></div><div class="logo "><img src="img/ws_eagles.png" alt="Eagles Warm Springs" loading="lazy"><figcaption>Eagles Warm Springs</figcaption></div><figure class="sq"><img src="img/ws_tee.jpg" alt="Eagles Ichishkiin tee" loading="lazy"><figcaption>Eagles Ichishkiin tee</figcaption></figure><figure class="sq"><img src="img/sonl_tees1.jpg" alt="Printed tees and patches" loading="lazy"><figcaption>Printed tees and patches</figcaption></figure><figure class="sq"><img src="img/sonl_tees2.jpg" alt="Stacked for the event" loading="lazy"><figcaption>Stacked for the event</figcaption></figure></div></div>
+</section>
+
+<section class="case" id="work">
+  <div class="wrap"><header class="case-head"><div class="kicker">Client brand and merch programs</div><h2>More work</h2>
+  <div class="case-body"><p>Identities that had to live on a hat patch, a banner, a hoodie and a sticker before they lived anywhere else. Each one taken from a conversation with the owner to a mark, a kit, and a print run.</p></div></header></div>
+
+  <div class="wrap"><div class="subhead"><h3>Otto&rsquo;s Landing</h3><p>A bar in Redmond. The owner wanted something people would wear home. The mark was designed for a leather patch first, a wood slice with the OTO monogram cut into it, and everything else, hats, tees, stickers, followed from that.</p></div></div><div class="wrap"><div class="grid c3 "><div class="logo "><img src="img/otto_logo.png" alt="Wood-slice badge and OTO mark" loading="lazy"><figcaption>Wood-slice badge and OTO mark</figcaption></div><figure class="sq"><img src="img/otto_patch.jpg" alt="The leather patch, 2 inches" loading="lazy"><figcaption>The leather patch, 2 inches</figcaption></figure><figure class="sq"><img src="img/otto_hat.jpg" alt="On the hat" loading="lazy"><figcaption>On the hat</figcaption></figure><figure class="sq"><img src="img/otto_tees.jpg" alt="Tees, four colorways" loading="lazy"><figcaption>Tees, four colorways</figcaption></figure><figure class="sq"><img src="img/otto_vinyl.jpg" alt="Cut vinyl" loading="lazy"><figcaption>Cut vinyl</figcaption></figure><figure class="sq"><img src="img/otto_screen.jpg" alt="Stickers on screen" loading="lazy"><figcaption>Stickers on screen</figcaption></figure></div></div>
+
+  <div class="wrap"><div class="subhead"><h3>Susan&rsquo;s Iron Garden</h3><p>Susan restores antique engines and tractors. Instead of inventing a look, I pulled it from her history: Gas Engine Magazine clippings from 1988 and 1997 and a photo of the tractor itself became the badge on the tees.</p></div></div><div class="wrap"><div class="grid c3 "><figure class="sq"><img src="img/sig_mag1.jpg" alt="Gas Engine Magazine, 1988" loading="lazy"><figcaption>Gas Engine Magazine, 1988</figcaption></figure><figure class="sq"><img src="img/sig_mag2.jpg" alt="Gas Engine Magazine, 1997" loading="lazy"><figcaption>Gas Engine Magazine, 1997</figcaption></figure><figure class="sq"><img src="img/sig_tractor.jpg" alt="The tractor" loading="lazy"><figcaption>The tractor</figcaption></figure><div class="logo "><img src="img/sig_logo.png" alt="The badge" loading="lazy"><figcaption>The badge</figcaption></div><figure class="sq"><img src="img/sig_proof.jpg" alt="On the tees" loading="lazy"><figcaption>On the tees</figcaption></figure></div></div>
+
+  <div class="wrap"><div class="subhead"><h3>FYRE</h3><p>One mark that had to work everywhere at once: a 42-by-6 fiber banner, woven banners, die-cut decals, a tablecloth and tees. Horizontal and vertical lockups so it never gets squeezed.</p></div></div><div class="wrap"><div class="grid c3 "><div class="logo ink"><img src="img/fyre_logo_h.png" alt="Horizontal" loading="lazy"><figcaption>Horizontal</figcaption></div><div class="logo ink"><img src="img/fyre_logo_v.png" alt="Vertical" loading="lazy"><figcaption>Vertical</figcaption></div><figure class="sq"><img src="img/fyre_banners.jpg" alt="Banners" loading="lazy"><figcaption>Banners</figcaption></figure><figure class="sq"><img src="img/fyre_decals.jpg" alt="Die-cut decals" loading="lazy"><figcaption>Die-cut decals</figcaption></figure><figure class="sq"><img src="img/fyre_table.jpg" alt="Tablecloth" loading="lazy"><figcaption>Tablecloth</figcaption></figure><figure class="sq"><img src="img/fyre_tees.jpg" alt="Tees" loading="lazy"><figcaption>Tees</figcaption></figure></div></div>
+
+  <div class="wrap"><div class="subhead"><h3>General Duffy&rsquo;s Waterhole</h3><p>A venue with a merch program that runs all year: the stag mark on staff tees and camo windbreakers, seasonal hoodies, and a custom illustration for the Car Show.</p></div></div><div class="wrap"><div class="grid c3 "><div class="logo "><img src="img/gd_logo.png" alt="The stag" loading="lazy"><figcaption>The stag</figcaption></div><div class="logo "><img src="img/gd_truck.png" alt="Car Show graphic" loading="lazy"><figcaption>Car Show graphic</figcaption></div><figure class="sq"><img src="img/gd_hoodies.jpg" alt="September hoodies" loading="lazy"><figcaption>September hoodies</figcaption></figure><figure class="sq"><img src="img/gd_tees.jpg" alt="Staff tees" loading="lazy"><figcaption>Staff tees</figcaption></figure><figure class="sq"><img src="img/gd_merch1.jpg" alt="Camo windbreakers" loading="lazy"><figcaption>Camo windbreakers</figcaption></figure><figure class="sq"><img src="img/gd_carshow.jpg" alt="Car Show tees" loading="lazy"><figcaption>Car Show tees</figcaption></figure></div></div>
+
+  <div class="wrap"><div class="subhead"><h3>Triple D Landscape Maintenance</h3><p>Concept to press. The logo, the proofs, the hats and jackets, the stickers on the cutter, the printed hoodie coming off the press.</p></div></div><div class="wrap"><div class="grid c3 "><div class="logo "><img src="img/td_logo.png" alt="The mark" loading="lazy"><figcaption>The mark</figcaption></div><figure class="sq"><img src="img/td_apparel.jpg" alt="Apparel" loading="lazy"><figcaption>Apparel</figcaption></figure><figure class="sq"><img src="img/td_hat.jpg" alt="Hats" loading="lazy"><figcaption>Hats</figcaption></figure><figure class="sq"><img src="img/td_hoodie.jpg" alt="Printed hoodie" loading="lazy"><figcaption>Printed hoodie</figcaption></figure><figure class="sq"><img src="img/td_stickers.jpg" alt="Stickers" loading="lazy"><figcaption>Stickers</figcaption></figure><figure class="sq"><img src="img/td_mark.jpg" alt="Proof" loading="lazy"><figcaption>Proof</figcaption></figure></div></div>
+
+  <div class="wrap"><div class="subhead"><h3>Sleepless Truckers and The Corral</h3><p>Two full kits for two very different businesses: a trucking crew that wanted twelve colorways and hats, and a country coffee stop that needed a banner, decals, a hat and tees.</p></div></div><div class="wrap"><div class="grid c3 "><div class="logo "><img src="img/st_logo.png" alt="Sleepless Truckers" loading="lazy"><figcaption>Sleepless Truckers</figcaption></div><figure class="sq"><img src="img/st_tees.jpg" alt="Twelve colorways" loading="lazy"><figcaption>Twelve colorways</figcaption></figure><figure class="sq"><img src="img/st_hats.jpg" alt="Hats" loading="lazy"><figcaption>Hats</figcaption></figure><div class="logo "><img src="img/corral_logo.png" alt="The Corral" loading="lazy"><figcaption>The Corral</figcaption></div><figure class="sq"><img src="img/corral_decals.jpg" alt="Decals and banner" loading="lazy"><figcaption>Decals and banner</figcaption></figure><figure class="sq"><img src="img/corral_tees.jpg" alt="Tees" loading="lazy"><figcaption>Tees</figcaption></figure></div></div>
+</section>
+
+<section class="case dark" id="marks"><div class="wrap">
+  <header class="case-head"><div class="kicker">Selected marks</div><h2>Logos</h2>
+  <div class="case-body"><p>A sample of the identities I have designed or art-directed for Central Oregon businesses: wineries, choirs, ranches, tattoo shops, landscapers, electricians, bars and a body piercer. Illustration on Beer Barn, EZ Panl and The Cutmen is mine.</p></div></header>
+  <div class="wall">
+    <div class="logo paper"><img src="img/nvf.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/sunflower.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ezpanl.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ezpanl_gal.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/beerbarn.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/homeslice.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/tomahawk.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/gardner.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ratco.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/trendkill.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/wilsons.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_122904.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_122845.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_122938.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_123037.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_123231.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_123309.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_123414.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_123445.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_123518.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_123549.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_125149.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_125728.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/ss_125254.png" alt="" loading="lazy"></div><div class="logo paper"><img src="img/tripler_mock.png" alt="" loading="lazy"></div>
+    <figure class="sq"><img src="img/cutmen_poster.jpg" alt="The Cutmen concert poster" loading="lazy"><figcaption>The Cutmen concert poster</figcaption></figure><figure class="sq"><img src="img/beerbarn_tee.jpg" alt="Beer Barn ringer tee" loading="lazy"><figcaption>Beer Barn ringer tee</figcaption></figure><figure class="sq"><img src="img/malheur_hat.jpg" alt="Malheur Rappel Crew" loading="lazy"><figcaption>Malheur Rappel Crew</figcaption></figure><figure class="sq"><img src="img/sobb_proof.jpg" alt="S.O.B.B. cornhole jerseys" loading="lazy"><figcaption>S.O.B.B. cornhole jerseys</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="case sites" id="sites"><div class="wrap">
+  <header class="case-head"><div class="kicker">White Hill · websites and brand</div><h2>Sites</h2>
+  <div class="case-body"><p>White Hill is my studio for small-business websites, brand and SEO, plus a revenue-recovery product for trade contractors. Four clients since founding, each from discovery through brand, build and launch.</p></div></header>
+  <div class="grid c2"><figure class="wide"><img src="img/site_whitehill.jpg" alt="whitehillweb.com" loading="lazy"><figcaption>whitehillweb.com</figcaption></figure><figure class="wide"><img src="img/site_keeks.jpg" alt="Kyanna Swendseid, lash and skin studio" loading="lazy"><figcaption>Kyanna Swendseid, lash and skin studio</figcaption></figure></div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <img src="img/headshot.jpg" alt="Ian Ricketts">
+  <div>
+    <h2>Ian Ricketts</h2>
+    <p>Creative director for brands and the merchandise that represents them. I set the vision, create the identity, and direct it through apparel, promo, stores and environments. I owned a print shop, then led a team of seven across sales, art, production and customer service as its general manager, which is why my direction is ambitious and the result is exactly as intended.</p>
+    <p>Hands-on in Illustrator, Photoshop, InDesign, Lightroom and AI image tools. Fluent across screen print, embroidery, DTF, DTG and laser, and in fabrics, fits, hardgoods and distributors. Three years on Fulfill Engine.</p>
+    <a class="cta" href="mailto:ianricketts188@gmail.com">Email me</a><a class="cta alt" href="Ian_Ricketts_Resume.pdf">Resume</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>&copy; 2026 Ian Ricketts</span><span>Redmond, Oregon · Remote, US</span></div></footer>
+
+<dialog id="lb"><img alt=""></dialog>
+<script>
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+document.querySelectorAll('figure img,.logo img,.lead img').forEach(i=>i.addEventListener('click',()=>{lbi.src=i.src;lb.showModal();}));
+lb.addEventListener('click',()=>lb.close());
+</script>
+</body>
+</html>
