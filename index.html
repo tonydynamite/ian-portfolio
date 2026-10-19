@@ -44,7 +44,7 @@ nav a{text-decoration:none} nav a:hover{text-decoration:underline}
 
 .band{background:var(--ink);color:var(--paper);padding:40px 0}
 .band .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-@media(min-width:900px){.band .wrap{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:900px){.band .wrap{grid-template-columns:repeat(3,1fr);row-gap:40px}}
 .band .n{font-weight:700;font-size:clamp(44px,6vw,72px);letter-spacing:-.05em;line-height:.9}
 .band .l{font-size:14px;color:#cfc9bc;margin-top:8px;max-width:220px;line-height:1.35}
 
@@ -109,6 +109,31 @@ figcaption{font-size:12px;color:var(--mute);padding:8px 2px 0;background:transpa
 .about p{font-size:17px;line-height:1.5;max-width:640px;margin-bottom:14px}
 .about .cta{display:inline-block;margin-top:10px;background:var(--ink);color:var(--paper);padding:14px 20px;text-decoration:none;font-weight:700;margin-right:10px}
 .about .cta.alt{background:none;color:var(--ink);border:1.5px solid var(--ink)}
+/* tools + certs */
+.tools{padding:56px 0 48px;border-top:1.5px solid var(--ink)}
+.tools .hd{display:grid;grid-template-columns:1fr;gap:8px 40px;margin-bottom:28px}
+@media(min-width:900px){.tools .hd{grid-template-columns:1fr 1fr;align-items:end}}
+.tools h2{font-weight:700;font-size:clamp(32px,4.5vw,56px);letter-spacing:-.05em;line-height:.95}
+.tools .sub{font-size:15px;color:#1a1a1a;max-width:520px}
+.toolrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.chip{display:flex;align-items:center;gap:12px;border:1.5px solid var(--ink);padding:12px 16px 12px 12px;background:var(--white);min-height:64px;opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.chip.in{opacity:1;transform:none}
+.chip img{width:40px;height:40px;object-fit:contain}
+.chip b{display:block;font-size:14px;letter-spacing:-.01em}
+.chip small{display:block;font-size:12px;color:var(--mute);margin-top:1px}
+.chip.fe{grid-column:span 2}
+.chip.fe img{width:auto;height:30px;max-width:150px}
+.chip.txt{padding:12px 16px}
+.certrow{display:grid;grid-template-columns:1fr;gap:12px;margin-top:28px}
+@media(min-width:700px){.certrow{grid-template-columns:repeat(3,1fr)}}
+.cert{display:flex;align-items:center;gap:14px;border-top:1.5px solid var(--ink);padding-top:14px;opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.cert.in{opacity:1;transform:none}
+.cert img{width:56px;height:56px;object-fit:contain}
+.cert b{display:block;font-size:15px;letter-spacing:-.01em}
+.cert span{font-size:13px;color:var(--mute)}
+.band>.wrap>div{opacity:0;transform:translateY(10px);transition:opacity .7s ease,transform .7s ease}
+.band>.wrap>div.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.chip,.cert,.band>.wrap>div{opacity:1;transform:none;transition:none}}
 footer{border-top:1.5px solid var(--ink);padding:18px 0;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
@@ -122,7 +147,7 @@ figure img,.logo img{cursor:zoom-in}
 <body>
 
 <nav><div class="wrap"><div class="nm">Ian Ricketts</div>
-<ul><li><a href="#bestfrend">Bestfrend</a></li><li><a href="#brandlab">BRANDLAB</a></li><li><a href="#buckstop">Buckstop</a></li><li><a href="#lightning">Oregon Lightning</a></li><li><a href="#sonl">Spirit of Our Native Language</a></li><li><a href="#work">More work</a></li><li><a href="#marks">Logos</a></li><li><a href="#about">About</a></li></ul></div></nav>
+<ul><li><a href="#bestfrend">Bestfrend</a></li><li><a href="#brandlab">BRANDLAB</a></li><li><a href="#buckstop">Buckstop</a></li><li><a href="#lightning">Oregon Lightning</a></li><li><a href="#sonl">Spirit of Our Native Language</a></li><li><a href="#work">More work</a></li><li><a href="#marks">Logos</a></li><li><a href="#tools">Tools</a></li><li><a href="#about">About</a></li></ul></div></nav>
 
 <header class="hero">
   <div class="wrap">
@@ -139,10 +164,32 @@ figure img,.logo img{cursor:zoom-in}
 </header>
 
 <section class="band"><div class="wrap">
-  <div><div class="n">10+</div><div class="l">full rebrands directed, from vision to storefront</div></div>
-  <div><div class="n">60+</div><div class="l">companies I have helped define and brand</div></div>
-  <div><div class="n">15+</div><div class="l">brand stores built, from identity and color to merch and marketing</div></div>
+  <div><div class="n">$345K</div><div class="l">revenue as owner-operator, $146K of it from 14 enterprise-scale orders</div></div>
+  <div><div class="n">7</div><div class="l">person team led as general manager across sales, art, production and service</div></div>
+  <div><div class="n">10+</div><div class="l">full rebrands, from vision to storefront, including Bear Prints to BRANDLAB</div></div>
+  <div><div class="n">60+</div><div class="l">companies I have helped define, brand and outfit</div></div>
+  <div><div class="n">15+</div><div class="l">branded online stores built and launched for clients</div></div>
   <div><div class="n">400+</div><div class="l">production-ready graphics art-directed and shipped</div></div>
+</div></section>
+
+<section class="tools" id="tools"><div class="wrap">
+  <div class="hd"><h2>Tools and certifications</h2><p class="sub">Hands-on in the Adobe suite every day. Three years on Fulfill Engine from its early days, with feedback that shaped how it works. Fluent across screen print, embroidery, DTF, DTG and laser, and in fabrics, fits, hardgoods and distributors.</p></div>
+  <div class="toolrow">
+    <div class="chip"><img src="img/tool_adobe_ai.png" alt=""><div><b>Illustrator</b><small>Identity, separations, vector art</small></div></div>
+    <div class="chip"><img src="img/tool_adobe_ps.png" alt=""><div><b>Photoshop</b><small>Mockups, retouching, DTG prep</small></div></div>
+    <div class="chip"><img src="img/tool_adobe_id.png" alt=""><div><b>InDesign</b><small>Catalogs, collateral, decks</small></div></div>
+    <div class="chip"><img src="img/tool_adobe_lr.png" alt=""><div><b>Lightroom</b><small>Product and lookbook photography</small></div></div>
+    <div class="chip"><img src="img/tool_adobe_acrobat.png" alt=""><div><b>Acrobat</b><small>Proofs and approvals</small></div></div>
+    <div class="chip fe"><img src="img/tool_fulfillengine.png" alt="Fulfill Engine"><div><b>Fulfill Engine · original user</b><small>Three years running the shop on it. Feedback from the floor helped shape its development.</small></div></div>
+    <div class="chip txt"><div><b>Shopify · Squarespace</b><small>15+ branded stores built and run</small></div></div>
+    <div class="chip txt"><div><b>HTML / CSS</b><small>This site, hand-written</small></div></div>
+    <div class="chip txt"><div><b>Photo, video and AI tools</b><small>Shot, edited and concepted in-house</small></div></div>
+  </div>
+  <div class="certrow">
+    <div class="cert"><img src="img/tool_badge1.png" alt=""><div><b>Inbound Sales Certified</b><span>HubSpot Academy · 2026</span></div></div>
+    <div class="cert"><img src="img/tool_badge2.png" alt=""><div><b>Customer Success for Sales</b><span>Salesforce Trailhead · 2026</span></div></div>
+    <div class="cert"><img src="img/tool_badge3.png" alt=""><div><b>KICKOFF Predictive Project Management</b><span>Project Management Institute · 2026</span></div></div>
+  </div>
 </div></section>
 
 
@@ -254,6 +301,13 @@ figure img,.logo img{cursor:zoom-in}
 const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
 document.querySelectorAll('figure img,.logo img,.lead img').forEach(i=>i.addEventListener('click',()=>{lbi.src=i.src;lb.showModal();}));
 lb.addEventListener('click',()=>lb.close());
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;io.unobserve(el);
+  const sib=[...el.parentElement.children].indexOf(el);setTimeout(()=>el.classList.add('in'),rm?0:sib*70);
+  const n=el.querySelector('.n');if(n&&!rm){const t=n.textContent,m=t.match(/^([$]?)(\d+)(.*)$/);if(m){const end=+m[2],t0=performance.now(),d=1100;
+    const step=now=>{const k=Math.min(1,(now-t0)/d),v=Math.round(end*(1-Math.pow(1-k,3)));n.textContent=m[1]+v+m[3];if(k<1)requestAnimationFrame(step)};n.textContent=m[1]+'0'+m[3];requestAnimationFrame(step)}}
+}),{threshold:.25});
+document.querySelectorAll('.chip,.cert,.band>.wrap>div').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
