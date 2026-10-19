@@ -8,8 +8,49 @@
 <meta property="og:image:width" content="1600"><meta property="og:image:height" content="900">
 <meta property="og:url" content="https://work.bestfrend.xyz/buckstop"><meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#EFEBE2;--ink:#111}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+:root{--bg:#fff;--ink:#0a0a0a;--mute:#6b6b6b;--hair:#e7e7e7;--cream:#F3EFE6;--cream2:#EAE4D6;--blue:#2457FF;--blue2:#1A43D6;--glow:rgba(36,87,255,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45;-webkit-font-smoothing:antialiased;font-size:14px}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--blue);color:#fff}
+.wrap{max-width:1360px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+.kicker{font-size:12px;color:var(--mute);letter-spacing:.02em;text-transform:uppercase;font-weight:500}
+.kicker.b{color:var(--blue)}
+nav{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.s{border-bottom-color:var(--hair)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:54px;gap:16px;font-size:12.5px}
+nav .nm{font-weight:700;letter-spacing:-.01em;white-space:nowrap;display:flex;align-items:center;gap:8px}
+nav .nm i{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 0 var(--glow);animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--glow)}70%{box-shadow:0 0 0 9px rgba(36,87,255,0)}100%{box-shadow:0 0 0 0 rgba(36,87,255,0)}}
+nav ul{display:flex;gap:18px;list-style:none;white-space:nowrap;overflow-x:auto;scrollbar-width:none;align-items:center}
+nav ul::-webkit-scrollbar{display:none}
+nav a{opacity:.75;transition:opacity .2s} nav a:hover{opacity:1}
+nav .pill{border:1px solid var(--ink);border-radius:999px;padding:7px 13px;opacity:1;background:var(--ink);color:#fff;font-weight:500}
+nav .pill:hover{background:var(--blue);border-color:var(--blue)}
+.cta{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);border-radius:999px;padding:11px 18px;font-size:13px;font-weight:500;white-space:nowrap;transition:transform .2s,background .2s,color .2s,border-color .2s}
+.cta:hover{transform:translateY(-1px)}
+.cta.fill{background:var(--ink);color:#fff} .cta.fill:hover{background:var(--blue);border-color:var(--blue)}
+.cta.blue{background:var(--blue);border-color:var(--blue);color:#fff} .cta.blue:hover{background:var(--blue2)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none} nav .nm i{animation:none}}
+footer{border-top:1px solid var(--ink);padding:32px 0 44px;font-size:12.5px;background:var(--cream)}
+footer .wrap{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:800px){footer .wrap{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+footer .col a{display:block;padding:4px 0} footer .col a:hover{color:var(--blue)}
+footer .col .h{color:var(--mute);margin-bottom:6px;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
+footer .big{font-weight:800;font-size:clamp(28px,4vw,48px);letter-spacing:-.04em;line-height:1}
+dialog{border:0;padding:0;margin:auto;background:transparent;max-width:95vw;max-height:95vh}
+dialog::backdrop{background:rgba(10,10,10,.94)}
+dialog img{max-width:95vw;max-height:95vh;object-fit:contain;border-radius:6px}
+
+
+:root{--bg:#fff;--ink:#0a0a0a}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1100px;margin:0 auto;padding:32px 16px 80px}a{color:inherit}
 nav{display:flex;justify-content:space-between;font-size:13px;margin-bottom:40px}nav a{text-decoration:none}
 h1{font-size:clamp(36px,7vw,84px);letter-spacing:-.03em;line-height:.95;margin:0 0 16px}
@@ -21,8 +62,10 @@ p.lead{font-size:18px;max-width:640px;line-height:1.45;margin:0 0 36px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1}
 .foot{margin-top:48px;font-size:14px}
 @media(max-width:700px){.pair,.grid{grid-template-columns:1fr}}
+nav{display:block;margin:0}nav .wrap{max-width:1360px;padding:0 20px;margin:0 auto}@media(min-width:900px){nav .wrap{padding:0 40px}}footer .wrap{max-width:1360px;padding:0 20px}@media(min-width:900px){footer .wrap{padding:0 40px}}
 </style></head><body><div class="wrap">
-<nav><a href="/">Ian Ricketts</a><a href="/">All work</a></nav>
+<nav id="nav"><div class="wrap"><a class="nm" href="/"><i></i>Ian Ricketts</a>
+<ul><li><a href="/#work">Work</a></li><li><a href="/#skills">Skills</a></li><li><a href="/#toolkit">Toolkit</a></li><li><a href="/#marks">Logos</a></li><li><a href="/work">The wall</a></li><li><a href="/#about">About</a></li><li><a href="https://www.linkedin.com/in/ian-ricketts-838a16346" target="_blank" rel="noopener">LinkedIn</a></li><li><a class="pill" href="mailto:ianricketts188@gmail.com">Hire me</a></li></ul></div></nav><div style="height:70px"></div>
 <h1>Buckstop.<br>Before, after.</h1>
 <p class="lead">Buckstop Truckware has been in Central Oregon since 2001. The old oval could have belonged to anyone. The new mark puts the truck front and center, in two colors and one, so it works on a tailgate, a tee, and a hat.</p>
 <div class="pair">
@@ -35,4 +78,4 @@ p.lead{font-size:18px;max-width:640px;line-height:1.45;margin:0 0 36px}
 </div>
 <div class="grid"><img src="img/bs_tee.jpg" alt="Buckstop tee"><img src="img/bs_store.jpg" alt="Buckstop store"><img src="img/bs_proof.jpg" alt="Buckstop proof"></div>
 <p class="foot">Ian Ricketts · <a href="/">work.bestfrend.xyz</a> · <a href="mailto:ianricketts188@gmail.com">ianricketts188@gmail.com</a></p>
-</div></body></html>
+</div><script>const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>8),{passive:true});</script></body></html>
