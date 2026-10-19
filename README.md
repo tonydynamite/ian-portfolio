@@ -2,7 +2,7 @@
 
 Live: **https://work.bestfrend.xyz**
 
-Creative direction for brands and the merchandise that represents them. Ten-plus full rebrands (including Bear Prints, est. 1978, → BRANDLAB), 60+ companies helped define their brand, 15+ brand stores launched, 400+ production-ready graphics shipped.
+I build brands, the merchandise that carries them, and the business behind it. Ten-plus full rebrands (including Bear Prints, est. 1978, → BRANDLAB), 60+ companies helped define their brand and merch, 15+ brand stores launched, and a team of seven led as general manager.
 
 Case studies on the site: Bestfrend · BRANDLAB · Buckstop · Oregon Lightning · Spirit of Our Native Language · more work, logos and sites.
 
