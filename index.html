@@ -7,8 +7,8 @@
 <meta name="description" content="Brand, merch and apparel work by Ian Ricketts: Bestfrend, BRANDLAB, Buckstop, Oregon Lightning and 60+ Central Oregon companies.">
 <link rel="canonical" href="https://work.bestfrend.xyz/">
 <meta property="og:title" content="Ian Ricketts — Brands, merch and the business behind them">
-<meta property="og:description" content="I build brands, sell the work, and run the business behind it. 10+ rebrands, 60+ companies, 15+ brand stores, a team of seven.">
-<meta property="og:image" content="https://work.bestfrend.xyz/img/bf_1689.jpg">
+<meta property="og:description" content="I build brands, sell the work, and run the business behind it. 1,297 client jobs, 10+ rebrands, 60+ companies, a team of seven.">
+<meta property="og:image" content="https://work.bestfrend.xyz/img/hero_client.jpg">
 <meta property="og:url" content="https://work.bestfrend.xyz/">
 <meta name="twitter:card" content="summary_large_image">
 <style>
@@ -36,6 +36,11 @@ nav a{text-decoration:none} nav a:hover{text-decoration:underline}
 .hero .role{font-weight:700;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em;line-height:1.08;max-width:720px}
 .hero .state{font-size:16px;line-height:1.45;max-width:560px;color:#1a1a1a}
 .hero .links{font-size:14px;line-height:1.7}
+.hero .who{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start}
+@media(min-width:900px){.hero .who{grid-template-columns:150px 1fr}}
+.hero .face{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;display:block}
+.hero .who .nm{font-weight:700;font-size:15px;margin-bottom:2px}
+.hero .who .bio{font-size:13.5px;line-height:1.45;color:#1a1a1a;margin-bottom:8px}
 .hero .links a{text-decoration:none;border-bottom:1px solid var(--ink)}
 .heroimg{margin-top:40px;height:min(82vh,760px);overflow:hidden;position:relative}
 .heroimg img{width:100%;height:100%;object-fit:cover}
@@ -109,6 +114,21 @@ figcaption{font-size:12px;color:var(--mute);padding:8px 2px 0;background:transpa
 .about p{font-size:17px;line-height:1.5;max-width:640px;margin-bottom:14px}
 .about .cta{display:inline-block;margin-top:10px;background:var(--ink);color:var(--paper);padding:14px 20px;text-decoration:none;font-weight:700;margin-right:10px}
 .about .cta.alt{background:none;color:var(--ink);border:1.5px solid var(--ink)}
+.floor{display:grid;grid-template-columns:1fr;gap:12px;margin-top:40px}
+@media(min-width:800px){.floor{grid-template-columns:1.5fr 1.5fr 1fr}}
+.floor figure{margin:0} .floor img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/2;display:block}
+@media(min-width:800px){.floor figure:last-child img{aspect-ratio:2/3}}
+.floor figcaption{font-size:12px;color:var(--mute);margin-top:6px}
+/* wall teaser */
+.wallteaser{padding:48px 0 0;overflow:hidden}
+.wallteaser .hd{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+.wallteaser h2{font-weight:700;font-size:clamp(32px,4.5vw,56px);letter-spacing:-.05em;line-height:.95}
+.wallteaser .cta{display:inline-block;background:var(--ink);color:var(--paper);padding:14px 20px;text-decoration:none;font-weight:700;white-space:nowrap}
+.strip{display:flex;gap:10px;width:max-content;animation:slide 60s linear infinite}
+.strip img{height:200px;width:auto;display:block;border:1px solid #d9d4c8;background:#fff}
+.stripwrap:hover .strip{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.strip{animation:none}}
 /* tools + certs */
 .tools{padding:56px 0 48px;border-top:1.5px solid var(--ink)}
 .tools .hd{display:grid;grid-template-columns:1fr;gap:8px 40px;margin-bottom:28px}
@@ -147,7 +167,7 @@ figure img,.logo img{cursor:zoom-in}
 <body>
 
 <nav><div class="wrap"><div class="nm">Ian Ricketts</div>
-<ul><li><a href="#bestfrend">Bestfrend</a></li><li><a href="#brandlab">BRANDLAB</a></li><li><a href="#buckstop">Buckstop</a></li><li><a href="#lightning">Oregon Lightning</a></li><li><a href="#sonl">Spirit of Our Native Language</a></li><li><a href="#work">More work</a></li><li><a href="#marks">Logos</a></li><li><a href="#tools">Tools</a></li><li><a href="#about">About</a></li></ul></div></nav>
+<ul><li><a href="#bestfrend">Bestfrend</a></li><li><a href="#brandlab">BRANDLAB</a></li><li><a href="#buckstop">Buckstop</a></li><li><a href="#lightning">Oregon Lightning</a></li><li><a href="#sonl">Spirit of Our Native Language</a></li><li><a href="#work">More work</a></li><li><a href="#marks">Logos</a></li><li><a href="work">The wall</a></li><li><a href="#tools">Tools</a></li><li><a href="#about">About</a></li></ul></div></nav>
 
 <header class="hero">
   <div class="wrap">
@@ -157,10 +177,10 @@ figure img,.logo img{cursor:zoom-in}
         <div class="role">I build brands, sell the work, and run the business behind it.</div>
         <p class="state" style="margin-top:14px">Eight years in branded merchandise, from owning a screen-printing shop to running it as general manager. Ten-plus full rebrands, 60+ companies helped define their brand and merch, 15+ brand stores built, and one apparel brand of my own, made by hand since 2018. I design the work, I sell it, and I lead the team that makes it. Everything on this page was made to be worn, hung, driven or handed to a customer.</p>
       </div>
-      <div class="links">Brand · Sales · Operations · Remote, US<br><a href="mailto:ianricketts188@gmail.com">ianricketts188@gmail.com</a><br><a href="https://bestfrend.xyz">bestfrend.xyz</a> · <a href="https://whitehillweb.com">whitehillweb.com</a><br><a href="Ian_Ricketts_Resume.pdf">Resume (PDF)</a> · <a href="https://github.com/tonydynamite/ian-portfolio">GitHub</a></div>
+      <div class="who"><img class="face" src="img/headshot.jpg" alt="Ian Ricketts on the press floor"><div><div class="nm">Ian Ricketts</div><div class="bio">General manager at BRANDLAB in Redmond, Oregon. Founder of Bestfrend and White Hill. Eight years in merch, on the floor and at the front desk.</div><div class="links">Brand · Sales · Operations · Remote, US<br><a href="mailto:ianricketts188@gmail.com">ianricketts188@gmail.com</a><br><a href="https://bestfrend.xyz">bestfrend.xyz</a> · <a href="https://whitehillweb.com">whitehillweb.com</a><br><a href="Ian_Ricketts_Resume.pdf">Resume (PDF)</a> · <a href="https://github.com/tonydynamite/ian-portfolio">GitHub</a></div></div></div>
     </div>
   </div>
-  <div class="heroimg"><img src="img/bf_1689.jpg" alt="Bestfrend reworked hooded jacket" style="object-position:50% 30%"><div class="cap">Bestfrend · reworked hooded jacket, one of one</div></div>
+  <div class="heroimg"><img src="img/hero_client.jpg" alt="Ian walking a client through her order at the shop" style="object-position:35% 40%"><div class="cap">Walking a client through her order at the shop</div></div>
 </header>
 
 <section class="band"><div class="wrap">
@@ -169,8 +189,12 @@ figure img,.logo img{cursor:zoom-in}
   <div><div class="n">10+</div><div class="l">full rebrands, from vision to storefront, including Bear Prints to BRANDLAB</div></div>
   <div><div class="n">60+</div><div class="l">companies I have helped define, brand and outfit</div></div>
   <div><div class="n">15+</div><div class="l">branded online stores built and launched for clients</div></div>
-  <div><div class="n">400+</div><div class="l">production-ready graphics art-directed and shipped</div></div>
+  <div><div class="n">1,297</div><div class="l">client jobs art-directed, proofed and shipped since 2021 <a href="work" style="color:#fff">see the wall</a></div></div>
 </div></section>
+
+<section class="wallteaser"><div class="wrap"><div class="hd"><div><div class="kicker">Bear Prints and BRANDLAB · 2021 to 2026</div><h2>1,297 client jobs, one proof sheet each.</h2></div><a class="cta" href="work">See the wall &rarr;</a></div></div>
+  <div class="stripwrap"><div class="strip"><img src="wall/1880.jpg" alt="Organic Scapes" loading="lazy"><img src="wall/1728.jpg" alt="Black Butte Ra" loading="lazy"><img src="wall/1551.jpg" alt="Prestige Hardwoo" loading="lazy"><img src="wall/1511.jpg" alt="Clock Tower" loading="lazy"><img src="wall/1484.jpg" alt="Big Sky Balloon Co." loading="lazy"><img src="wall/1443.jpg" alt="Crooked River Ranch Water" loading="lazy"><img src="wall/1414.jpg" alt="Southside Physic" loading="lazy"><img src="wall/1397.jpg" alt="Wendy" loading="lazy"><img src="wall/1381.jpg" alt="Latino Com" loading="lazy"><img src="wall/1372.jpg" alt="ConsumerCellular" loading="lazy"><img src="wall/1364.jpg" alt="Cooper Construction" loading="lazy"><img src="wall/1355.jpg" alt="Custom Hat" loading="lazy"><img src="wall/1346.jpg" alt="Tim" loading="lazy"><img src="wall/1323.jpg" alt="La Familia Tattoo" loading="lazy"><img src="wall/1307.jpg" alt="Snider Landscaping" loading="lazy"><img src="wall/1295.jpg" alt="Type One Inciden" loading="lazy"><img src="wall/1265.jpg" alt="Rock Solid Roo" loading="lazy"><img src="wall/1248.jpg" alt="Sisters Meat and S" loading="lazy"><img src="wall/1239.jpg" alt="Bill Sizemore Painting" loading="lazy"><img src="wall/1230.jpg" alt="Sophia Lemaitre" loading="lazy"><img src="wall/1880.jpg" alt="Organic Scapes" loading="lazy"><img src="wall/1728.jpg" alt="Black Butte Ra" loading="lazy"><img src="wall/1551.jpg" alt="Prestige Hardwoo" loading="lazy"><img src="wall/1511.jpg" alt="Clock Tower" loading="lazy"><img src="wall/1484.jpg" alt="Big Sky Balloon Co." loading="lazy"><img src="wall/1443.jpg" alt="Crooked River Ranch Water" loading="lazy"><img src="wall/1414.jpg" alt="Southside Physic" loading="lazy"><img src="wall/1397.jpg" alt="Wendy" loading="lazy"><img src="wall/1381.jpg" alt="Latino Com" loading="lazy"><img src="wall/1372.jpg" alt="ConsumerCellular" loading="lazy"><img src="wall/1364.jpg" alt="Cooper Construction" loading="lazy"><img src="wall/1355.jpg" alt="Custom Hat" loading="lazy"><img src="wall/1346.jpg" alt="Tim" loading="lazy"><img src="wall/1323.jpg" alt="La Familia Tattoo" loading="lazy"><img src="wall/1307.jpg" alt="Snider Landscaping" loading="lazy"><img src="wall/1295.jpg" alt="Type One Inciden" loading="lazy"><img src="wall/1265.jpg" alt="Rock Solid Roo" loading="lazy"><img src="wall/1248.jpg" alt="Sisters Meat and S" loading="lazy"><img src="wall/1239.jpg" alt="Bill Sizemore Painting" loading="lazy"><img src="wall/1230.jpg" alt="Sophia Lemaitre" loading="lazy"></div></div>
+</section>
 
 <section class="tools" id="tools"><div class="wrap">
   <div class="hd"><h2>Tools and certifications</h2><p class="sub">Hands-on in the Adobe suite every day. Three years on Fulfill Engine from its early days, with feedback that shaped how it works. Fluent across screen print, embroidery, DTF, DTG and laser, and in fabrics, fits, hardgoods and distributors.</p></div>
@@ -292,6 +316,11 @@ figure img,.logo img{cursor:zoom-in}
     <p>Hands-on in Illustrator, Photoshop, InDesign, Lightroom and AI image tools. Fluent across screen print, embroidery, DTF, DTG and laser, and in fabrics, fits, hardgoods and distributors. Three years on Fulfill Engine.</p>
     <a class="cta" href="mailto:ianricketts188@gmail.com">Email me</a><a class="cta alt" href="Ian_Ricketts_Resume.pdf">Resume</a>
   </div>
+</div>
+<div class="wrap floor">
+  <figure><img src="img/shop_overhead.jpg" alt="The shop floor" loading="lazy"><figcaption>The floor: automatic and manual presses, dryer, embroidery and DTF behind</figcaption></figure>
+  <figure><img src="img/shop_team.jpg" alt="The team" loading="lazy"><figcaption>The team of seven, plus the owner</figcaption></figure>
+  <figure><img src="img/shop_squeegee.jpg" alt="Pulling a print" loading="lazy"><figcaption>Still pull prints when the floor needs it</figcaption></figure>
 </div></section>
 
 <footer><div class="wrap"><span>&copy; 2026 Ian Ricketts</span><span>Redmond, Oregon · Remote, US</span></div></footer>
