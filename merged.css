@@ -103,3 +103,6 @@
 .identity-block .metarow{align-self:start;margin-top:14px;padding-top:14px}
 .identity-block .profile-portrait{margin-top:14px}
 @media(max-width:540px){.identity-block .metarow{margin-top:11px}.identity-block .right{border-top:0;padding-top:0}.identity-block .right .fn{margin-left:auto}}
+.sf-two{margin-top:40px}
+.sf-two .sf-col{border-top-color:var(--ink)}
+.sf-two .sf-col+.sf-col{border-top-color:var(--ink)}
