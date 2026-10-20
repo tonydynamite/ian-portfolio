@@ -1,0 +1,27 @@
+:root{--bg:#f4f3ed;--ink:#20251e;--mute:#64695e;--hair:#d5d8cc;--cream:#e8e9df;--cream2:#dbe0cd;--blue:#20251e;--accent:#d5ec72}
+body{background:var(--bg);color:var(--ink)}
+nav{background:rgba(244,243,237,.96);border-bottom:1px solid var(--hair);backdrop-filter:blur(16px)}
+nav .wrap{height:76px;max-width:1480px;padding:0 48px}
+nav .nm{font-weight:700;font-size:15px}nav ul{gap:26px}
+nav a{opacity:1;font-size:12px}
+nav .pill{background:var(--accent);border-color:var(--accent);color:var(--ink);border-radius:3px;padding:10px 17px}
+nav .pill:hover{background:var(--ink);color:var(--bg)}
+nav li:has(a[href="index.html#toolkit"]),nav li:has(a[href="index.html#marks"]),nav li:has(a[href^="https://www.linkedin"]){display:none}
+.hero{padding-top:125px}
+.hero h1{font-weight:600;letter-spacing:-.06em}
+.band{background:var(--accent)}
+.band .n{font-weight:600}
+.tools input{border-radius:3px;background:var(--bg)}
+.tools input:focus{box-shadow:0 0 0 3px #d5ec72}
+figure{border-radius:0;opacity:1;transition:border-color .2s}
+figure::after{display:none}
+figure:hover{box-shadow:none}
+.sec h2{font-weight:600;letter-spacing:-.05em}
+.card{background:#e8e9df}
+.pair,.grid{gap:18px}
+.cta{border-radius:3px}
+footer{background:var(--accent)}
+footer .big{font-weight:600;letter-spacing:-.05em}
+a:focus-visible,.tw:focus-visible{outline:3px solid #758b28;outline-offset:5px}
+@media(max-width:800px){nav .wrap{height:64px;padding:0 24px}nav ul{gap:20px}}
+@media(max-width:540px){nav .wrap{padding:0 20px}nav .nm{font-size:12px}nav ul{gap:16px}nav a{font-size:11px}nav li:has(a[href="work.html"]){display:none}.hero{padding-top:100px}.band .n{font-size:35px}figure.pair{padding:12px 12px 36px}.grid.pairs{gap:14px}}

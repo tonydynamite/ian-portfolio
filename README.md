@@ -10,4 +10,6 @@ Case studies on the site: Bestfrend · BRANDLAB · Buckstop · Oregon Lightning 
 - Email: ianricketts188@gmail.com
 - bestfrend.xyz · whitehillweb.com
 
-Static site: single `index.html`, hand-written HTML/CSS, no build step. Deployed on Netlify from this repo.
+Static HTML, CSS and JavaScript, with no build step. Deployed on Netlify from this repo.
+
+The homepage leads with skills, tools, certifications and business results, followed by selected work and case studies. The selected design uses white and black with coral (#F87060) and teal (#048A81) accents. `wall-overview.jpg` contains a high-resolution overview of 60 portfolio graphics.
