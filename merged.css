@@ -116,3 +116,17 @@
 @media(max-width:1100px){.identity-copy .sig{width:240px}}
 @media(max-width:800px){.identity-copy .sig{width:200px;margin-bottom:-4px}}
 @media(max-width:540px){.identity-copy .sig{grid-row:3;grid-column:1/-1;align-self:start;width:58%;max-width:220px;margin:2px 0 0 -4px}.identity-block{row-gap:10px}}
+/* Bestfrend: artists, musicians and influencers */
+.artists{padding:8px 0 40px}
+.artists .subhead{margin-top:8px}
+.artists .subhead p{max-width:640px}
+.art-grid{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:14px;margin-top:26px;align-items:start}
+.art-lead{margin:0}
+.art-lead img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#f2f2f2}
+.made-for{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.made-for li{padding:9px 0;border-bottom:1px solid var(--hair);display:grid;gap:2px}
+.made-for b{font-weight:600;font-size:14px;letter-spacing:-.01em}
+.made-for span{font-size:12px;line-height:1.55;color:var(--mute)}
+.made-for li.more{font-size:12px;color:var(--mute);border-bottom:0;padding-top:12px}
+@media(max-width:800px){.art-grid{grid-template-columns:1fr 1fr}.made-for{grid-column:1/-1}}
+@media(max-width:540px){.artists{padding-bottom:24px}.art-grid{gap:10px}.made-for b{font-size:13px}.made-for span,.made-for li.more{font-size:11px}}
