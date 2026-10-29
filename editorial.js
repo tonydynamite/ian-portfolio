@@ -40,19 +40,27 @@ function bez(P){var d='M'+f(P[0][0])+' '+f(P[0][1]);if(P.length===2)return d+'L'
 var svg=document.createElementNS(NS,'svg');svg.setAttribute('viewBox','0 0 '+SIG.w+' '+SIG.h);svg.setAttribute('aria-hidden','true');
 var defs=document.createElementNS(NS,'defs');var mask=document.createElementNS(NS,'mask');mask.setAttribute('id','sigmask');mask.setAttribute('maskUnits','userSpaceOnUse');
 var paths=[],lens=[];
-SIG.s.forEach(function(st){var p=document.createElementNS(NS,'path');p.setAttribute('d',bez(st));p.setAttribute('fill','none');p.setAttribute('stroke','#fff');p.setAttribute('stroke-width','32');p.setAttribute('stroke-linecap','round');p.setAttribute('stroke-linejoin','round');mask.appendChild(p);paths.push(p)});
+SIG.s[6]=SIG.s[6].slice().reverse();SIG.s.forEach(function(st){var p=document.createElementNS(NS,'path');p.setAttribute('d',bez(st));p.setAttribute('fill','none');p.setAttribute('stroke','#fff');p.setAttribute('stroke-width','32');p.setAttribute('stroke-linecap','round');p.setAttribute('stroke-linejoin','round');mask.appendChild(p);paths.push(p)});
 defs.appendChild(mask);svg.appendChild(defs);
 var g=document.createElementNS(NS,'g');g.setAttribute('mask','url(#sigmask)');var ink=document.createElementNS(NS,'path');ink.setAttribute('d',INK);ink.setAttribute('fill','currentColor');ink.setAttribute('fill-rule','evenodd');ink.setAttribute('transform','scale(.5)');g.appendChild(ink);svg.appendChild(g);
 box.appendChild(svg);
 paths.forEach(function(p,i){lens[i]=p.getTotalLength()});
 var total=lens.reduce(function(a,b){return a+b},0);
-function setDash(el,L,drawn){el.style.strokeDasharray=(L+4)+' '+(L+4);el.style.strokeDashoffset=(L+4)-Math.max(0,Math.min(L,drawn));el.style.visibility=drawn>0.5?'visible':'hidden'}
-function draw(s){var c=0;paths.forEach(function(p,i){setDash(p,lens[i],s-c);c+=lens[i]})}
+/* replay of the real pen: order, direction, pen lifts and speed taken from the original video */
+var PLAN=[[0,60,230],[6,370,330],[1,780,230],[2,1090,370],[3,1530,170],[4,1750,180],[5,2000,400],[7,2460,170]];
+var prev=[];
+function setDash(i,drawn){var L=lens[i];drawn=Math.max(0,Math.min(L,drawn));if(prev[i]!==undefined&&Math.abs(prev[i]-drawn)<.25)return;prev[i]=drawn;var el=paths[i];el.style.strokeDasharray=(L+4)+' '+(L+4);el.style.strokeDashoffset=(L+4)-drawn;el.style.visibility=drawn>0.5?'visible':'hidden'}
+/* slow down through corners, like a hand does */
+function prof(p,L){var n=Math.max(8,Math.round(L/5)),P=[],i;for(i=0;i<=n;i++)P.push(p.getPointAtLength(L*i/n));var T=[0],ang=[0];for(i=1;i<n;i++){var a1=Math.atan2(P[i].y-P[i-1].y,P[i].x-P[i-1].x),a2=Math.atan2(P[i+1].y-P[i].y,P[i+1].x-P[i].x),d=Math.abs(a2-a1);if(d>Math.PI)d=2*Math.PI-d;ang.push(d)}ang.push(0);for(i=1;i<=n;i++){var c=(ang[i-1]+ang[i]+(ang[i-2]||0)+(ang[i+1]||0))/4;T.push(T[i-1]+1+3.2*c)}var m=T[n];return function(u){var x=u*m,j=1;while(j<n&&T[j]<x)j++;var a=T[j-1],b=T[j];return L*((j-1)+(b>a?(x-a)/(b-a):0))/n}}
+var maps=paths.map(function(p,i){return prof(p,lens[i])});
+function soft(t){return t-0.7*Math.sin(2*Math.PI*t)/(2*Math.PI)}
+function flick(t){return 0.35*t+0.65*t*t}
+function draw(ms){PLAN.forEach(function(s,k){var i=s[0],t=(ms-s[1])/s[2];t=t<0?0:t>1?1:t;var u=i===7?flick(t):soft(t);setDash(i,t>=1?lens[i]:maps[i](u))})}
 function done(){g.removeAttribute('mask')}
 if(reduce){done();return}
-draw(0);
-var dur=2200,t0=null,delay=250;
-function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
-function frame(ts){if(t0===null)t0=ts;var t=Math.min(1,(ts-t0-delay)/dur);if(t<0){requestAnimationFrame(frame);return}draw(total*ease(t));if(t<1)requestAnimationFrame(frame);else done()}
-requestAnimationFrame(frame);
+draw(-1);
+var END=PLAN.reduce(function(a,s){return Math.max(a,s[1]+s[2])},0),t0=null,go=false;
+function frame(ts){if(t0===null)t0=ts;var ms=ts-t0;draw(ms);if(ms<END)requestAnimationFrame(frame);else done()}
+function start(){if(go)return;go=true;requestAnimationFrame(function(){requestAnimationFrame(frame)})}
+if(document.readyState==='complete')setTimeout(start,150);else{addEventListener('load',function(){setTimeout(start,120)});setTimeout(start,1400)}
 })();
