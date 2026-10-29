@@ -106,3 +106,13 @@
 .sf-two{margin-top:40px}
 .sf-two .sf-col{border-top-color:var(--ink)}
 .sf-two .sf-col+.sf-col{border-top-color:var(--ink)}
+
+/* signature intro: signed under the name, in the same grid cell as the metarow */
+.identity-block h1{grid-column:1/-1;grid-row:1}
+.identity-block .metarow{grid-column:1;grid-row:2;align-self:start}
+.identity-block .profile-portrait{grid-column:2;grid-row:2}
+.identity-copy .sig{grid-column:1;grid-row:2;align-self:end;justify-self:start;width:300px;aspect-ratio:838/309;margin:0 0 -6px -6px;pointer-events:none}
+.identity-copy .sig svg{display:block;width:100%;height:100%;overflow:visible}
+@media(max-width:1100px){.identity-copy .sig{width:240px}}
+@media(max-width:800px){.identity-copy .sig{width:200px;margin-bottom:-4px}}
+@media(max-width:540px){.identity-copy .sig{grid-row:3;grid-column:1/-1;align-self:start;width:58%;max-width:220px;margin:2px 0 0 -4px}.identity-block{row-gap:10px}}
